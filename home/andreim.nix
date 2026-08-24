@@ -1,5 +1,10 @@
-{ pkgs, ... }:
+{ config, pkgs, ... }:
 
+let
+  unstable = import <nixos-unstable> {
+    inherit (config.nixpkgs) config;
+  };
+in
 {
   users.users.andreim.packages = with pkgs; [
     firefox
@@ -9,10 +14,10 @@
 
     discord
     deezer-desktop
-    whatsapp-electron
+    karere
 
     fastfetch
-    flameshot
+    unstable.flameshot
     btop
 
     gh

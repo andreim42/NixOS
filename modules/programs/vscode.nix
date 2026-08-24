@@ -7,6 +7,7 @@
         ms-ceintl.vscode-language-pack-fr
 
         ms-vscode.cpptools-extension-pack
+        ms-vscode.cpptools
         edonet.vscode-command-runner
 
         ms-python.python
