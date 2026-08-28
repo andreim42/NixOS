@@ -75,7 +75,7 @@
     gdb
     gnumake
     pkg-config
-    python314
+    python3
   ];
 
   # Allows VSCode C++ debugging

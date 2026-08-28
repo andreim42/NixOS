@@ -6,8 +6,9 @@
     gnomeExtensions.dash-to-dock
     gnomeExtensions.tactile
 
-    gnomeExtensions.status-tray
+    gnomeExtensions.appindicator
     gnomeExtensions.tasks-in-panel
+    gnomeExtensions.copyous
 
     gnomeExtensions.blur-my-shell
     gnomeExtensions.vitals

@@ -11,36 +11,17 @@
 
   xdg.portal = {
     enable = true;
-
     extraPortals = with pkgs; [
       xdg-desktop-portal-gnome
     ];
-
-    config = {
-      common = {
-        default = [ "gnome" ];
-      };
-    };
+    xdgOpenUsePortal = true;
   };
-  
-  # Correct big cursor bug (doesn't actually correct the bug)
-  programs.dconf.enable = true;
-  
-  services.desktopManager.gnome.extraGSettingsOverrides = ''
-    [org.gnome.desktop.interface]
-    cursor-size=24
-    cursor-theme='Adwaita'
-  '';
 
-  environment.variables = {
-    XCURSOR_THEME = "Adwaita";
-    XCURSOR_SIZE = "24";
-  };
+  # Automatic screen rotation
+  hardware.sensor.iio.enable = true;
   
   # Better compatibility with Electron
-  environment.sessionVariables = {
-    NIXOS_OZONE_WL = "1";
-  };
+  environment.sessionVariables.NIXOS_OZONE_WL = "1";
   
   # Configure keymap in X11
   services.xserver.xkb = {
