@@ -81,11 +81,8 @@
   # Allows VSCode C++ debugging
   programs.nix-ld.enable = true;
 
-  services = {
-    envfs = {
-      enable = true;
-    };
-  };
+  # Disabled because it crashes system when using Python VSCode extension
+  # services.envfs.enable = true;
 
   # Enable some fonts
   fonts.enableDefaultPackages = true;

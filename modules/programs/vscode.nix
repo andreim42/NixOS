@@ -11,9 +11,9 @@
         edonet.vscode-command-runner
 
         ms-python.python
-        #ms-python.vscode-pylance
-        #ms-python.debugpy
-        #ms-python.vscode-python-envs
+        ms-python.vscode-pylance
+        ms-python.debugpy
+        ms-python.vscode-python-envs
 
         myriad-dreamin.tinymist
         tomoki1207.pdf

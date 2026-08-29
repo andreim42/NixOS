@@ -1,19 +1,8 @@
 { config, pkgs, ... }:
 
 let
-  myPython = pkgs.python3.override {
-    packageOverrides = self: super: {
-      jedi = super.jedi.overridePythonAttrs (oldAttrs: rec {
-        version = "0.19.2";
-        src = pkgs.fetchPypi {
-          pname = "jedi";
-          inherit version;
-          hash = "sha256-07I4/YlYgW8L309aLq0I0jG3+9a0f0W/Z/8gQ+I4O14=";
-        };
-        doCheck = false;
-        checkPhase = "";
-      });
-    };
+  unstable = import <nixos-unstable> {
+    inherit (config.nixpkgs) config;
   };
 in
 {
@@ -25,13 +14,15 @@ in
       scipy
       
       pillow
-
-      # Required for Spyder
+    ]))
+    
+    # Required for Spyder
+    (unstable.python3.withPackages (python-pkgs: with python-pkgs; [
       spyder
       spyder-kernels
       ipython
-      python-lsp-server
       python-lsp-black
+      python-lsp-server
       jedi
       black
       autopep8
