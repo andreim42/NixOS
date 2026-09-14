@@ -14,5 +14,13 @@
     gnomeExtensions.vitals
 
     gnome-tweaks
+
+    # for GSConnect integration
+    nautilus-python
   ];
+
+  programs.kdeconnect = {
+    enable = true;
+    package = pkgs.gnomeExtensions.gsconnect;
+  };
 }

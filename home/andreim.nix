@@ -13,7 +13,7 @@ in
 
     discord
     deezer-desktop
-    karere
+    zapzap
 
     fastfetch
     unstable.flameshot
@@ -29,6 +29,6 @@ in
     obs-studio
 
     anki
-    joplin-desktop
+    unstable.joplin-desktop
   ];
 }

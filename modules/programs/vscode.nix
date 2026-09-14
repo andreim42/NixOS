@@ -23,7 +23,7 @@
         bierner.markdown-checkbox
         bierner.markdown-footnotes
         bierner.markdown-mermaid
-
+        
         bbenoist.nix
       ];
     })

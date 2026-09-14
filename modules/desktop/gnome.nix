@@ -3,8 +3,11 @@
 {
   hardware.graphics.enable = true;
 
-  services.desktopManager.gnome.enable = true;
   services.displayManager.gdm.enable = true;
+  services.desktopManager.gnome.enable = true;
+
+  services.gnome.games.enable = false;
+  environment.gnome.excludePackages = with pkgs; [ gnome-tour epiphany ];
 
   # Compatibility with xorg
   programs.xwayland.enable = true;
