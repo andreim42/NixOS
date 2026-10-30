@@ -16,5 +16,8 @@
       pygame
       pylint
     ]))
+
+    # NSI
+    pyxel
   ];
 }
